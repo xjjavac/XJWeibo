@@ -1,0 +1,27 @@
+ [
+  {
+  "vcName": "XJHomeTableViewController",
+  "title": "首页",
+  "imageName": "tabbar_home"
+  },
+  {
+  "vcName": "XJMessageTableViewController",
+  "title": "消息",
+  "imageName": "tabbar_message_center"
+  },
+  {
+  "vcName": "XJNullViewController",
+  "title": "",
+  "imageName": "tabbar_message_center"
+  },
+  {
+  "vcName": "XJDiscoverTableViewController",
+  "title": "广场",
+  "imageName": "tabbar_discover"
+  },
+  {
+  "vcName": "XJProfileTableViewController",
+  "title": "我",
+  "imageName": "tabbar_profile"
+  }
+  ]

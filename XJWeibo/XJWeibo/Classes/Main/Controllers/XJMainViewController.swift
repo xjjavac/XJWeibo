@@ -14,26 +14,44 @@ class XJMainViewController: UITabBarController {
         super.viewDidLoad()
         tabBar.tintColor = UIColor.orangeColor()
         
-        /*
-        //1.创建首页
-        let home = XJHomeTableViewController()
+        //1.获取json文件的路径
+        let path = NSBundle.mainBundle().pathForResource("XJMainVCSettings.json", ofType: nil)
         
-        home.tabBarItem.image = UIImage(named: "tabbar_home")
-        home.tabBarItem.selectedImage = UIImage(named: "tabbar_home_highlighted")
-//        home.tabBarItem.title = "首页"
-//        home.navigationItem.title = "首页"
-        home.title = "首页"
-        //2.给首页包装一个导航控制器
-        let nav = UINavigationController()
-        nav.addChildViewController(home)
+      
+        //2.通过文件路径创建NSData
+        if let jsonPath = path {
+            let jsonData = NSData(contentsOfFile: jsonPath)
+            do{
+                //有可能发生异常的代码放到这里
+                //3.序列化json数据 --> Array
+                let dictArr = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.MutableContainers)
+                //4.遍历数组，动态创建控制器和设置数据
+                for dict in dictArr as! [[String:String]] {
+                    addChildViewController(dict["vcName"]!, title: dict["title"]!, imageName: dict["imageName"]!)
+                 
+                }
+            }catch{
+                //发生异常之后会执行的代码
+                print(error)
+                print("2222")
+                //2.添加子控制器
+                addChildViewController("XJHomeTableViewController", title: "首页", imageName: "tabbar_home")
+                addChildViewController("XJMessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+                addChildViewController("XJDiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
+                addChildViewController("XJProfileTableViewController", title: "我", imageName: "tabbar_profile")
+            }
+            
+        }else{
         
-        //3.将导航控制器添加到当前控制器上
-        addChildViewController(nav)
-        */
-        addChildViewController("XJHomeTableViewController", title: "首页", imageName: "tabbar_home")
-        addChildViewController("XJMessageTableViewController", title: "消息", imageName: "tabbar_message_center")
-        addChildViewController("XJDiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
-        addChildViewController("XJProfileTableViewController", title: "我", imageName: "tabbar_profile")
+            //2.添加子控制器
+            addChildViewController("XJHomeTableViewController", title: "首页", imageName: "tabbar_home")
+            addChildViewController("XJMessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+            addChildViewController("XJDiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
+            addChildViewController("XJProfileTableViewController", title: "我", imageName: "tabbar_profile")
+        
+        
+        
+        }
     }
     /**
      初始化只控制器
@@ -63,7 +81,7 @@ class XJMainViewController: UITabBarController {
         //1.设置首页对应的数据
         vc.tabBarItem.image = UIImage(named: imageName)
         vc.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
-        vc.title = "首页"
+        vc.title = title
         
         //2.给首页包装一个导航控制器
         let nav = UINavigationController()
