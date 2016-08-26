@@ -16,6 +16,7 @@
 		36A73E9A1D6FF06600D2DC85 /* XJDiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E991D6FF06600D2DC85 /* XJDiscoverTableViewController.swift */; };
 		36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E9B1D6FF09500D2DC85 /* XJMessageTableViewController.swift */; };
 		36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */; };
+		36A73EA21D70185500D2DC85 /* XJNullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73EA11D70185500D2DC85 /* XJNullViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36A73E1E1D6FDECA00D2DC85 /* XJWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A73E1E1D6FDECA00D2DC85 /* 大微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A73E211D6FDECA00D2DC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A73E281D6FDECA00D2DC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A73E2D1D6FDECA00D2DC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		36A73E991D6FF06600D2DC85 /* XJDiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJDiscoverTableViewController.swift; sourceTree = "<group>"; };
 		36A73E9B1D6FF09500D2DC85 /* XJMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJMessageTableViewController.swift; sourceTree = "<group>"; };
 		36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJProfileTableViewController.swift; sourceTree = "<group>"; };
+		36A73EA01D7016F800D2DC85 /* MainVCSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		36A73EA11D70185500D2DC85 /* XJNullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNullViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +94,7 @@
 		36A73E1F1D6FDECA00D2DC85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36A73E1E1D6FDECA00D2DC85 /* XJWeibo.app */,
+				36A73E1E1D6FDECA00D2DC85 /* 大微博.app */,
 				36A73E321D6FDECA00D2DC85 /* XJWeiboTests.xctest */,
 				36A73E3D1D6FDECA00D2DC85 /* XJWeiboUITests.xctest */,
 			);
@@ -102,9 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				36A73E211D6FDECA00D2DC85 /* AppDelegate.swift */,
-				36A73E761D6FEEDB00D2DC85 /* Classes */,
 				36A73E281D6FDECA00D2DC85 /* Assets.xcassets */,
 				36A73E2D1D6FDECA00D2DC85 /* Info.plist */,
+				36A73E761D6FEEDB00D2DC85 /* Classes */,
 			);
 			path = XJWeibo;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 		36A73E831D6FEEDB00D2DC85 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				36A73E9F1D70160300D2DC85 /* Resource */,
 				36A73E841D6FEEDB00D2DC85 /* Controllers */,
 				36A73E851D6FEEDB00D2DC85 /* Models */,
 				36A73E861D6FEEDB00D2DC85 /* Views */,
@@ -363,6 +367,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		36A73E9F1D70160300D2DC85 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				36A73EA01D7016F800D2DC85 /* MainVCSettings.json */,
+				36A73EA11D70185500D2DC85 /* XJNullViewController.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,7 +393,7 @@
 			);
 			name = XJWeibo;
 			productName = XJWeibo;
-			productReference = 36A73E1E1D6FDECA00D2DC85 /* XJWeibo.app */;
+			productReference = 36A73E1E1D6FDECA00D2DC85 /* 大微博.app */;
 			productType = "com.apple.product-type.application";
 		};
 		36A73E311D6FDECA00D2DC85 /* XJWeiboTests */ = {
@@ -499,6 +512,7 @@
 				36A73E981D6FEFE000D2DC85 /* XJHomeTableViewController.swift in Sources */,
 				36A73E9A1D6FF06600D2DC85 /* XJDiscoverTableViewController.swift in Sources */,
 				36A73E961D6FEFA400D2DC85 /* XJMainViewController.swift in Sources */,
+				36A73EA21D70185500D2DC85 /* XJNullViewController.swift in Sources */,
 				36A73E221D6FDECA00D2DC85 /* AppDelegate.swift in Sources */,
 				36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */,
 				36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */,
@@ -629,7 +643,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjswift.www.XJWeibo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "大微博";
 			};
 			name = Debug;
 		};
@@ -642,7 +656,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjswift.www.XJWeibo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "大微博";
 			};
 			name = Release;
 		};
