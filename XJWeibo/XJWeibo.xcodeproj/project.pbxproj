@@ -18,6 +18,18 @@
 		36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */; };
 		36A73EAC1D70376400D2DC85 /* XJNullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */; };
 		36A73EAE1D7037A400D2DC85 /* XJMainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */; };
+		36DF15B71D7142DC004F009D /* XJBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF15B61D7142DC004F009D /* XJBaseTableViewController.swift */; };
+		36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF15B81D714666004F009D /* XJVisitorView.swift */; };
+		36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */; };
+		36E50B401D73EBA00012E4D2 /* XJTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */; };
+		36FAEB1B1D74041200262926 /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FAEB1A1D74041200262926 /* PopoverViewController.storyboard */; };
+		36FAEB1D1D74108800262926 /* XJPopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FAEB1C1D74108800262926 /* XJPopoverPresentationController.swift */; };
+		36FAEB1F1D742E7300262926 /* XJPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FAEB1E1D742E7300262926 /* XJPopoverAnimator.swift */; };
+		36FAEB221D7445D100262926 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FAEB211D7445D100262926 /* QRCodeViewController.storyboard */; };
+		36FAEB241D7447DC00262926 /* XJQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FAEB231D7447DC00262926 /* XJQRCodeViewController.swift */; };
+		7DFE7B758EBE1E370731100A /* Pods_XJWeiboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEAF7F123F6216DE4A447C0 /* Pods_XJWeiboUITests.framework */; };
+		83E7E9024942ED0B49FE1D2B /* Pods_XJWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395AC238489583EE5F47D937 /* Pods_XJWeibo.framework */; };
+		ED1A80A68BC6D27B3EC37AAA /* Pods_XJWeiboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B39CE0605608F97575D150 /* Pods_XJWeiboTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12384ED977A707C6240A3181 /* Pods-XJWeiboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeiboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeiboTests/Pods-XJWeiboTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36A73E1E1D6FDECA00D2DC85 /* 大微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A73E211D6FDECA00D2DC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A73E281D6FDECA00D2DC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +68,23 @@
 		36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJProfileTableViewController.swift; sourceTree = "<group>"; };
 		36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNullViewController.swift; sourceTree = "<group>"; };
 		36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XJMainVCSettings.json; sourceTree = "<group>"; };
+		36DF15B61D7142DC004F009D /* XJBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJBaseTableViewController.swift; sourceTree = "<group>"; };
+		36DF15B81D714666004F009D /* XJVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJVisitorView.swift; sourceTree = "<group>"; };
+		36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XJEstension.swift"; sourceTree = "<group>"; };
+		36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJTitleButton.swift; sourceTree = "<group>"; };
+		36FAEB1A1D74041200262926 /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
+		36FAEB1C1D74108800262926 /* XJPopoverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJPopoverPresentationController.swift; sourceTree = "<group>"; };
+		36FAEB1E1D742E7300262926 /* XJPopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJPopoverAnimator.swift; sourceTree = "<group>"; };
+		36FAEB211D7445D100262926 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
+		36FAEB231D7447DC00262926 /* XJQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJQRCodeViewController.swift; sourceTree = "<group>"; };
+		395AC238489583EE5F47D937 /* Pods_XJWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XJWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561907C75F26E69D164A9286 /* Pods-XJWeiboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeiboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeiboUITests/Pods-XJWeiboUITests.release.xcconfig"; sourceTree = "<group>"; };
+		635AA8246BD90D85E43EC06B /* Pods-XJWeibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeibo/Pods-XJWeibo.debug.xcconfig"; sourceTree = "<group>"; };
+		9EB5D9B3173519E037FC7C06 /* Pods-XJWeibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeibo/Pods-XJWeibo.release.xcconfig"; sourceTree = "<group>"; };
+		9F6F0B575567BA6FCE770943 /* Pods-XJWeiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeiboUITests/Pods-XJWeiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAEAF7F123F6216DE4A447C0 /* Pods_XJWeiboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XJWeiboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B39CE0605608F97575D150 /* Pods_XJWeiboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XJWeiboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9822152957E66BBDAE2D30B /* Pods-XJWeiboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeiboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeiboTests/Pods-XJWeiboTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E7E9024942ED0B49FE1D2B /* Pods_XJWeibo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1A80A68BC6D27B3EC37AAA /* Pods_XJWeiboTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +108,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFE7B758EBE1E370731100A /* Pods_XJWeiboUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28374AD070283D93F36304A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				395AC238489583EE5F47D937 /* Pods_XJWeibo.framework */,
+				D8B39CE0605608F97575D150 /* Pods_XJWeiboTests.framework */,
+				AAEAF7F123F6216DE4A447C0 /* Pods_XJWeiboUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		36A73E151D6FDECA00D2DC85 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +132,8 @@
 				36A73E351D6FDECA00D2DC85 /* XJWeiboTests */,
 				36A73E401D6FDECA00D2DC85 /* XJWeiboUITests */,
 				36A73E1F1D6FDECA00D2DC85 /* Products */,
+				7BCF6989815E52F013356C0A /* Pods */,
+				28374AD070283D93F36304A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,32 +193,10 @@
 		36A73E771D6FEEDB00D2DC85 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				36A73E781D6FEEDB00D2DC85 /* Controllers */,
-				36A73E791D6FEEDB00D2DC85 /* Models */,
-				36A73E7A1D6FEEDB00D2DC85 /* Views */,
+				36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */,
+				36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		36A73E781D6FEEDB00D2DC85 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		36A73E791D6FEEDB00D2DC85 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		36A73E7A1D6FEEDB00D2DC85 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		36A73E7B1D6FEEDB00D2DC85 /* Discover */ = {
@@ -221,6 +244,8 @@
 		36A73E801D6FEEDB00D2DC85 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36FAEB201D74458100262926 /* QRCode */,
+				36FAEB191D74038700262926 /* Popover */,
 				36A73E971D6FEFE000D2DC85 /* XJHomeTableViewController.swift */,
 			);
 			path = Controllers;
@@ -255,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				36A73E951D6FEFA400D2DC85 /* XJMainViewController.swift */,
+				36DF15B61D7142DC004F009D /* XJBaseTableViewController.swift */,
+				36DF15B81D714666004F009D /* XJVisitorView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +404,38 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		36FAEB191D74038700262926 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				36FAEB1A1D74041200262926 /* PopoverViewController.storyboard */,
+				36FAEB1C1D74108800262926 /* XJPopoverPresentationController.swift */,
+				36FAEB1E1D742E7300262926 /* XJPopoverAnimator.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
+		36FAEB201D74458100262926 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				36FAEB211D7445D100262926 /* QRCodeViewController.storyboard */,
+				36FAEB231D7447DC00262926 /* XJQRCodeViewController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		7BCF6989815E52F013356C0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				635AA8246BD90D85E43EC06B /* Pods-XJWeibo.debug.xcconfig */,
+				9EB5D9B3173519E037FC7C06 /* Pods-XJWeibo.release.xcconfig */,
+				12384ED977A707C6240A3181 /* Pods-XJWeiboTests.debug.xcconfig */,
+				F9822152957E66BBDAE2D30B /* Pods-XJWeiboTests.release.xcconfig */,
+				9F6F0B575567BA6FCE770943 /* Pods-XJWeiboUITests.debug.xcconfig */,
+				561907C75F26E69D164A9286 /* Pods-XJWeiboUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,9 +443,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A73E461D6FDECA00D2DC85 /* Build configuration list for PBXNativeTarget "XJWeibo" */;
 			buildPhases = (
+				4EF7F7130442A7F33F6F15D4 /* [CP] Check Pods Manifest.lock */,
 				36A73E1A1D6FDECA00D2DC85 /* Sources */,
 				36A73E1B1D6FDECA00D2DC85 /* Frameworks */,
 				36A73E1C1D6FDECA00D2DC85 /* Resources */,
+				53B22EBE30D9B43F94F755FC /* [CP] Embed Pods Frameworks */,
+				972580FE23C6381D1C615790 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,9 +463,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A73E491D6FDECA00D2DC85 /* Build configuration list for PBXNativeTarget "XJWeiboTests" */;
 			buildPhases = (
+				767A7176AB2931B2C9C97775 /* [CP] Check Pods Manifest.lock */,
 				36A73E2E1D6FDECA00D2DC85 /* Sources */,
 				36A73E2F1D6FDECA00D2DC85 /* Frameworks */,
 				36A73E301D6FDECA00D2DC85 /* Resources */,
+				D78BAC444B38E7220F49990B /* [CP] Embed Pods Frameworks */,
+				73626FA2574CFDC30E18DC94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,9 +484,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A73E4C1D6FDECA00D2DC85 /* Build configuration list for PBXNativeTarget "XJWeiboUITests" */;
 			buildPhases = (
+				109E9119059765FAB7A2F936 /* [CP] Check Pods Manifest.lock */,
 				36A73E391D6FDECA00D2DC85 /* Sources */,
 				36A73E3A1D6FDECA00D2DC85 /* Frameworks */,
 				36A73E3B1D6FDECA00D2DC85 /* Resources */,
+				52C7AAA370AEE4A7D1DAACA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -485,8 +552,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36FAEB1B1D74041200262926 /* PopoverViewController.storyboard in Resources */,
 				36A73EAE1D7037A400D2DC85 /* XJMainVCSettings.json in Resources */,
 				36A73E291D6FDECA00D2DC85 /* Assets.xcassets in Resources */,
+				36FAEB221D7445D100262926 /* QRCodeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,17 +575,147 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		109E9119059765FAB7A2F936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF7F7130442A7F33F6F15D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52C7AAA370AEE4A7D1DAACA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJWeiboUITests/Pods-XJWeiboUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53B22EBE30D9B43F94F755FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJWeibo/Pods-XJWeibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73626FA2574CFDC30E18DC94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJWeiboTests/Pods-XJWeiboTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		767A7176AB2931B2C9C97775 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		972580FE23C6381D1C615790 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJWeibo/Pods-XJWeibo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D78BAC444B38E7220F49990B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJWeiboTests/Pods-XJWeiboTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36A73E1A1D6FDECA00D2DC85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36A73E981D6FEFE000D2DC85 /* XJHomeTableViewController.swift in Sources */,
+				36FAEB1F1D742E7300262926 /* XJPopoverAnimator.swift in Sources */,
+				36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */,
+				36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */,
 				36A73E9A1D6FF06600D2DC85 /* XJDiscoverTableViewController.swift in Sources */,
 				36A73E961D6FEFA400D2DC85 /* XJMainViewController.swift in Sources */,
+				36FAEB1D1D74108800262926 /* XJPopoverPresentationController.swift in Sources */,
+				36E50B401D73EBA00012E4D2 /* XJTitleButton.swift in Sources */,
 				36A73EAC1D70376400D2DC85 /* XJNullViewController.swift in Sources */,
 				36A73E221D6FDECA00D2DC85 /* AppDelegate.swift in Sources */,
 				36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */,
+				36DF15B71D7142DC004F009D /* XJBaseTableViewController.swift in Sources */,
+				36FAEB241D7447DC00262926 /* XJQRCodeViewController.swift in Sources */,
 				36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,32 +837,41 @@
 		};
 		36A73E471D6FDECA00D2DC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 635AA8246BD90D85E43EC06B /* Pods-XJWeibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = XJWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjswift.www.XJWeibo;
 				PRODUCT_NAME = "大微博";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		36A73E481D6FDECA00D2DC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB5D9B3173519E037FC7C06 /* Pods-XJWeibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = XJWeibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjswift.www.XJWeibo;
 				PRODUCT_NAME = "大微博";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		36A73E4A1D6FDECA00D2DC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12384ED977A707C6240A3181 /* Pods-XJWeiboTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = XJWeiboTests/Info.plist;
@@ -676,6 +884,7 @@
 		};
 		36A73E4B1D6FDECA00D2DC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9822152957E66BBDAE2D30B /* Pods-XJWeiboTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = XJWeiboTests/Info.plist;
@@ -688,6 +897,7 @@
 		};
 		36A73E4D1D6FDECA00D2DC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6F0B575567BA6FCE770943 /* Pods-XJWeiboUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = XJWeiboUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -699,6 +909,7 @@
 		};
 		36A73E4E1D6FDECA00D2DC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561907C75F26E69D164A9286 /* Pods-XJWeiboUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = XJWeiboUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

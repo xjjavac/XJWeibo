@@ -8,88 +8,115 @@
 
 import UIKit
 
-class XJHomeTableViewController: UITableViewController {
+class XJHomeTableViewController: XJBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //1.如果没有登录，就设置未登录界面的信息
+        if !userLogin {
+            visitorView.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
+            return
+        }
+        //2.初始化导航条
+        setupNav()
+        //3.注册通知，监听菜单
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.change), name: XJPopoverAnimatorWillShow, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.change), name: XJPopoverAnimatorWillDismiss, object: nil)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    deinit{
+    //移除通知
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func change() -> Void {
+        let titleBtn = navigationItem.titleView as! XJTitleButton
+        titleBtn.selected = !titleBtn.selected
+        
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    private func setupNav() -> Void {
+        //1.初始化化左右按钮
+        navigationItem.leftBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_friendattention", target: self, action: #selector(self.letfItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_pop", target: self, action: #selector(self.rightItemClick))
+        //2.初始化化标题按钮
+        let titleBtn = XJTitleButton()
+        titleBtn.setTitle("xjswift ", forState: UIControlState.Normal)
+        titleBtn.sizeToFit()
+        titleBtn.addTarget(self, action: #selector(self.titleBtnClick(_:)), forControlEvents: .TouchUpInside)
+        navigationItem.titleView = titleBtn
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    func titleBtnClick(btn:XJTitleButton) -> Void {
+        //1.修改箭头方向
+//        btn.selected = !btn.selected
+        //2.弹出菜单
+        let sb = UIStoryboard(name: "PopoverViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        //2.1设置转场代理
+        //默认情况下modal会移除以前控制器的view,替换为当前弹出的view
+        //如果自定义转场，那么就不会移除以前控制器的view
+        vc?.transitioningDelegate = popoverAnimator
+        
+        //2.2设置转场的样式
+        vc?.modalPresentationStyle = UIModalPresentationStyle.Custom
+        presentViewController(vc!, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func letfItemClick() -> Void {
+        print(#function)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    func rightItemClick() -> Void {
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: NSBundle.mainBundle())
+        let vc = sb.instantiateInitialViewController()
+        presentViewController(vc!, animated: true, completion: nil)
+        
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    //MARK: - 懒加载
+    private lazy var popoverAnimator:XJPopoverAnimator = {
+        let pa = XJPopoverAnimator()
+        pa.presentFrame = CGRectMake(100, 56, 200, 350)
+        return pa
+    
+    }()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

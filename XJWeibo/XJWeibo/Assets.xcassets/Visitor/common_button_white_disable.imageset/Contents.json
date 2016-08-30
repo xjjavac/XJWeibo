@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 2,
+          "height" : 2
+        },
+        "cap-insets" : {
+          "bottom" : 33,
+          "top" : 35,
+          "right" : 9,
+          "left" : 11
+        }
+      },
       "idiom" : "universal",
       "filename" : "common_button_white_disable@2x.png",
       "scale" : "2x"

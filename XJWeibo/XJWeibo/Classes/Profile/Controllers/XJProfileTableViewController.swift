@@ -8,16 +8,14 @@
 
 import UIKit
 
-class XJProfileTableViewController: UITableViewController {
+class XJProfileTableViewController: XJBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if !userLogin {
+            visitorView.setupVisitorInfo(false, imageName: "visitordiscover_image_message", message: "登录后，你的微博、相册、个人资料会显示在这里，展示给别人")
+        }
     }
 
     override func didReceiveMemoryWarning() {
