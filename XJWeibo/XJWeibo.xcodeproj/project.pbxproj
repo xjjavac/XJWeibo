@@ -22,6 +22,10 @@
 		36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF15B81D714666004F009D /* XJVisitorView.swift */; };
 		36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */; };
 		36E50B401D73EBA00012E4D2 /* XJTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */; };
+		36EFDC211D753FFC008E4FEF /* XJOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFDC201D753FFC008E4FEF /* XJOAuthViewController.swift */; };
+		36EFDC231D755C03008E4FEF /* XJNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFDC221D755C03008E4FEF /* XJNetworkTools.swift */; };
+		36EFDC251D756A79008E4FEF /* XJUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFDC241D756A79008E4FEF /* XJUserAccount.swift */; };
+		36EFDC271D758C21008E4FEF /* String+XJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EFDC261D758C21008E4FEF /* String+XJExtension.swift */; };
 		36FAEB1B1D74041200262926 /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FAEB1A1D74041200262926 /* PopoverViewController.storyboard */; };
 		36FAEB1D1D74108800262926 /* XJPopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FAEB1C1D74108800262926 /* XJPopoverPresentationController.swift */; };
 		36FAEB1F1D742E7300262926 /* XJPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FAEB1E1D742E7300262926 /* XJPopoverAnimator.swift */; };
@@ -72,6 +76,10 @@
 		36DF15B81D714666004F009D /* XJVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJVisitorView.swift; sourceTree = "<group>"; };
 		36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XJEstension.swift"; sourceTree = "<group>"; };
 		36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJTitleButton.swift; sourceTree = "<group>"; };
+		36EFDC201D753FFC008E4FEF /* XJOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJOAuthViewController.swift; sourceTree = "<group>"; };
+		36EFDC221D755C03008E4FEF /* XJNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNetworkTools.swift; sourceTree = "<group>"; };
+		36EFDC241D756A79008E4FEF /* XJUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJUserAccount.swift; sourceTree = "<group>"; };
+		36EFDC261D758C21008E4FEF /* String+XJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+XJExtension.swift"; sourceTree = "<group>"; };
 		36FAEB1A1D74041200262926 /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
 		36FAEB1C1D74108800262926 /* XJPopoverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJPopoverPresentationController.swift; sourceTree = "<group>"; };
 		36FAEB1E1D742E7300262926 /* XJPopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJPopoverAnimator.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 		36A73E761D6FEEDB00D2DC85 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				36EFDC1F1D753FC4008E4FEF /* OAuth */,
 				36A73E771D6FEEDB00D2DC85 /* Common */,
 				36A73E7B1D6FEEDB00D2DC85 /* Discover */,
 				36A73E7F1D6FEEDB00D2DC85 /* Home */,
@@ -370,6 +379,8 @@
 				36A73E901D6FEEDB00D2DC85 /* Controllers */,
 				36A73E911D6FEEDB00D2DC85 /* Models */,
 				36A73E921D6FEEDB00D2DC85 /* Views */,
+				36EFDC221D755C03008E4FEF /* XJNetworkTools.swift */,
+				36EFDC261D758C21008E4FEF /* String+XJExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -402,6 +413,15 @@
 				36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		36EFDC1F1D753FC4008E4FEF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				36EFDC201D753FFC008E4FEF /* XJOAuthViewController.swift */,
+				36EFDC241D756A79008E4FEF /* XJUserAccount.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		36FAEB191D74038700262926 /* Popover */ = {
@@ -704,6 +724,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A73E981D6FEFE000D2DC85 /* XJHomeTableViewController.swift in Sources */,
+				36EFDC251D756A79008E4FEF /* XJUserAccount.swift in Sources */,
 				36FAEB1F1D742E7300262926 /* XJPopoverAnimator.swift in Sources */,
 				36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */,
 				36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */,
@@ -715,7 +736,10 @@
 				36A73E221D6FDECA00D2DC85 /* AppDelegate.swift in Sources */,
 				36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */,
 				36DF15B71D7142DC004F009D /* XJBaseTableViewController.swift in Sources */,
+				36EFDC231D755C03008E4FEF /* XJNetworkTools.swift in Sources */,
 				36FAEB241D7447DC00262926 /* XJQRCodeViewController.swift in Sources */,
+				36EFDC211D753FFC008E4FEF /* XJOAuthViewController.swift in Sources */,
+				36EFDC271D758C21008E4FEF /* String+XJExtension.swift in Sources */,
 				36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

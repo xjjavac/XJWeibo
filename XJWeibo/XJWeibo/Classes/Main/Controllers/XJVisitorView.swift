@@ -32,10 +32,10 @@ class XJVisitorView: UIView {
         }
     }
     func loginBtnClick() -> Void {
-        print(#function)
+       delegate?.loginBtnWillClick()
     }
     func registerBtnClick() -> Void {
-        print(#function)
+        delegate?.registerBtnWillClick()
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
