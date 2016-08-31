@@ -60,7 +60,7 @@ class XJHomeTableViewController: XJBaseTableViewController {
         presentViewController(vc!, animated: true, completion: nil)
     }
     func letfItemClick() -> Void {
-        print(#function)
+        
     }
     func rightItemClick() -> Void {
         let sb = UIStoryboard(name: "QRCodeViewController", bundle: NSBundle.mainBundle())

@@ -100,7 +100,7 @@ class XJUserAccount: NSObject ,NSCoding{
     }
     override var description: String{
         get{
-            let properties = ["access_token","expires_in","uid"]
+            let properties = ["access_token","expires_in","uid","avatar_large","screen_name"]
             let dict = self.dictionaryWithValuesForKeys(properties)
             return "\(dict)"
             

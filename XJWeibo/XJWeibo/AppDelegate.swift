@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//切换控制器通知
+let XJSwithchRootViewControllerKey = "XJSwithchRootViewControllerKey"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        //注册一个通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.switchRootViewController(_:)), name: XJSwithchRootViewControllerKey, object: nil)
+        
         // Override point for customization after application launch.
         //设置导航条和工具条的外观
         //应为外观一旦设置全局有效，所以应该在程序一进来就设置
@@ -25,12 +30,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.frame = UIScreen.mainScreen().bounds
         window?.backgroundColor = UIColor.whiteColor()
         //2.创建根控制器
-        window?.rootViewController = XJMainViewController()
+        window?.rootViewController = defaultContoller()
         
         window?.makeKeyAndVisible()
+        isNewupdate()
         return true
     }
-
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    func switchRootViewController(notify:NSNotification) -> () {
+        if notify.object as! Bool {
+            window?.rootViewController = XJMainViewController()
+            
+        }else{
+            window?.rootViewController = XJWelcomeViewController()
+        }
+    }
+    /**
+     用于获取默认界面
+     
+     - returns: 默认界面
+     */
+    func defaultContoller() -> UIViewController {
+        if XJUserAccount.userLogin() {
+            return isNewupdate() ? XJNewfeatureCollectionViewController() : XJWelcomeViewController()
+        }
+        return XJMainViewController()
+    }
+    func isNewupdate() -> Bool {
+        //1.获取当前软件的版本号
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        //2.获取以前的软件版本号-->从本地文件中读取（以前自己存储的）
+        let sandboxVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
+        //3.比较当前版本号和以前版本号
+        if currentVersion.compare(sandboxVersion) == NSComparisonResult.OrderedDescending {
+            //3.1如果当前>以前-->有新版本
+            //3.1.1存储当前最新的版本号
+            //ios7以后就不用调用同步方法了
+        NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: "CFBundleShortVersionString")
+            return true
+        }
+        //3.2如果当前< | == --> 没有新版本
+        return false
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

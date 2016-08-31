@@ -102,6 +102,9 @@ extension XJOAuthViewController:UIWebViewDelegate{
                 account.loadUserInfo({ (account, error) in
                     if account != nil{
                         account!.saveAccount()
+                        //去欢迎界面
+                        NSNotificationCenter.defaultCenter().postNotificationName(XJSwithchRootViewControllerKey, object: false)
+                        return
                     }
                     SVProgressHUD.showInfoWithStatus("网络不给力")
                     SVProgressHUD.setDefaultMaskType(.Black)
