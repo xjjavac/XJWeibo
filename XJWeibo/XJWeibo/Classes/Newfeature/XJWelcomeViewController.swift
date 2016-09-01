@@ -38,7 +38,7 @@ class XJWelcomeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         weak var weakSelf = self
-        UIView.animateWithDuration(2, animations: {
+        UIView.animateWithDuration(1.2, animations: {
             weakSelf!.messageLabel.alpha = 1.0
             }) { (_) in
                 NSNotificationCenter.defaultCenter().postNotificationName(XJSwithchRootViewControllerKey, object: true)

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		368CCE4F1D767ACC000AB800 /* XJWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE4E1D767ACC000AB800 /* XJWelcomeViewController.swift */; };
+		368CCE511D769E0D000AB800 /* XJStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE501D769E0D000AB800 /* XJStatus.swift */; };
+		368CCE531D76B310000AB800 /* XJUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE521D76B310000AB800 /* XJUser.swift */; };
+		368CCE551D76BDAF000AB800 /* XJStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE541D76BDAF000AB800 /* XJStatusTableViewCell.swift */; };
+		368CCE571D76E31C000AB800 /* UILabel+XJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE561D76E31C000AB800 /* UILabel+XJExtension.swift */; };
+		368CCE591D76E352000AB800 /* XJUIButton+XJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE581D76E352000AB800 /* XJUIButton+XJExtension.swift */; };
+		368CCE5B1D77047B000AB800 /* NSDate+XJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CCE5A1D77047B000AB800 /* NSDate+XJExtension.swift */; };
 		36A73E221D6FDECA00D2DC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E211D6FDECA00D2DC85 /* AppDelegate.swift */; };
 		36A73E291D6FDECA00D2DC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A73E281D6FDECA00D2DC85 /* Assets.xcassets */; };
 		36A73E371D6FDECA00D2DC85 /* XJWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E361D6FDECA00D2DC85 /* XJWeiboTests.swift */; };
@@ -19,6 +25,8 @@
 		36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */; };
 		36A73EAC1D70376400D2DC85 /* XJNullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */; };
 		36A73EAE1D7037A400D2DC85 /* XJMainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */; };
+		36D9C95E1D77FB29007665EC /* XJStatusTableViewBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9C95D1D77FB29007665EC /* XJStatusTableViewBottomView.swift */; };
+		36D9C9601D77FC4E007665EC /* XJStatusTableViewTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9C95F1D77FC4E007665EC /* XJStatusTableViewTopView.swift */; };
 		36DF15B71D7142DC004F009D /* XJBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF15B61D7142DC004F009D /* XJBaseTableViewController.swift */; };
 		36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DF15B81D714666004F009D /* XJVisitorView.swift */; };
 		36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */; };
@@ -58,6 +66,12 @@
 /* Begin PBXFileReference section */
 		12384ED977A707C6240A3181 /* Pods-XJWeiboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJWeiboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJWeiboTests/Pods-XJWeiboTests.debug.xcconfig"; sourceTree = "<group>"; };
 		368CCE4E1D767ACC000AB800 /* XJWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJWelcomeViewController.swift; sourceTree = "<group>"; };
+		368CCE501D769E0D000AB800 /* XJStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatus.swift; sourceTree = "<group>"; };
+		368CCE521D76B310000AB800 /* XJUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJUser.swift; sourceTree = "<group>"; };
+		368CCE541D76BDAF000AB800 /* XJStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusTableViewCell.swift; sourceTree = "<group>"; };
+		368CCE561D76E31C000AB800 /* UILabel+XJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+XJExtension.swift"; sourceTree = "<group>"; };
+		368CCE581D76E352000AB800 /* XJUIButton+XJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XJUIButton+XJExtension.swift"; sourceTree = "<group>"; };
+		368CCE5A1D77047B000AB800 /* NSDate+XJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+XJExtension.swift"; sourceTree = "<group>"; };
 		36A73E1E1D6FDECA00D2DC85 /* 大微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A73E211D6FDECA00D2DC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A73E281D6FDECA00D2DC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +89,8 @@
 		36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJProfileTableViewController.swift; sourceTree = "<group>"; };
 		36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNullViewController.swift; sourceTree = "<group>"; };
 		36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XJMainVCSettings.json; sourceTree = "<group>"; };
+		36D9C95D1D77FB29007665EC /* XJStatusTableViewBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusTableViewBottomView.swift; sourceTree = "<group>"; };
+		36D9C95F1D77FC4E007665EC /* XJStatusTableViewTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusTableViewTopView.swift; sourceTree = "<group>"; };
 		36DF15B61D7142DC004F009D /* XJBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJBaseTableViewController.swift; sourceTree = "<group>"; };
 		36DF15B81D714666004F009D /* XJVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJVisitorView.swift; sourceTree = "<group>"; };
 		36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XJEstension.swift"; sourceTree = "<group>"; };
@@ -209,6 +225,8 @@
 			children = (
 				36E50B3D1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift */,
 				36E50B3F1D73EBA00012E4D2 /* XJTitleButton.swift */,
+				368CCE561D76E31C000AB800 /* UILabel+XJExtension.swift */,
+				368CCE581D76E352000AB800 /* XJUIButton+XJExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -268,6 +286,8 @@
 		36A73E811D6FEEDB00D2DC85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				368CCE501D769E0D000AB800 /* XJStatus.swift */,
+				368CCE521D76B310000AB800 /* XJUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +295,9 @@
 		36A73E821D6FEEDB00D2DC85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				368CCE541D76BDAF000AB800 /* XJStatusTableViewCell.swift */,
+				36D9C95F1D77FC4E007665EC /* XJStatusTableViewTopView.swift */,
+				36D9C95D1D77FB29007665EC /* XJStatusTableViewBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +409,7 @@
 				36A73E921D6FEEDB00D2DC85 /* Views */,
 				36EFDC221D755C03008E4FEF /* XJNetworkTools.swift */,
 				36EFDC261D758C21008E4FEF /* String+XJExtension.swift */,
+				368CCE5A1D77047B000AB800 /* NSDate+XJExtension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -737,12 +761,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368CCE531D76B310000AB800 /* XJUser.swift in Sources */,
 				36A73E981D6FEFE000D2DC85 /* XJHomeTableViewController.swift in Sources */,
 				36EFDC251D756A79008E4FEF /* XJUserAccount.swift in Sources */,
 				36FAEB1F1D742E7300262926 /* XJPopoverAnimator.swift in Sources */,
+				368CCE571D76E31C000AB800 /* UILabel+XJExtension.swift in Sources */,
 				36E50B3E1D73EB400012E4D2 /* UIBarButtonItem+XJEstension.swift in Sources */,
 				36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */,
 				36A73E9A1D6FF06600D2DC85 /* XJDiscoverTableViewController.swift in Sources */,
+				36D9C9601D77FC4E007665EC /* XJStatusTableViewTopView.swift in Sources */,
 				36A73E961D6FEFA400D2DC85 /* XJMainViewController.swift in Sources */,
 				36FAEB1D1D74108800262926 /* XJPopoverPresentationController.swift in Sources */,
 				36E50B401D73EBA00012E4D2 /* XJTitleButton.swift in Sources */,
@@ -751,12 +778,17 @@
 				36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */,
 				36DF15B71D7142DC004F009D /* XJBaseTableViewController.swift in Sources */,
 				36EFDC231D755C03008E4FEF /* XJNetworkTools.swift in Sources */,
+				368CCE5B1D77047B000AB800 /* NSDate+XJExtension.swift in Sources */,
 				36FAEB241D7447DC00262926 /* XJQRCodeViewController.swift in Sources */,
+				368CCE551D76BDAF000AB800 /* XJStatusTableViewCell.swift in Sources */,
 				36EFDC211D753FFC008E4FEF /* XJOAuthViewController.swift in Sources */,
 				36EFDC271D758C21008E4FEF /* String+XJExtension.swift in Sources */,
 				368CCE4F1D767ACC000AB800 /* XJWelcomeViewController.swift in Sources */,
+				368CCE511D769E0D000AB800 /* XJStatus.swift in Sources */,
 				36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */,
+				36D9C95E1D77FB29007665EC /* XJStatusTableViewBottomView.swift in Sources */,
 				36EFDC2A1D75BB9D008E4FEF /* XJNewfeatureCollectionViewController.swift in Sources */,
+				368CCE591D76E352000AB800 /* XJUIButton+XJExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

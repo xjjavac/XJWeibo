@@ -9,7 +9,16 @@
 import UIKit
 
 class XJHomeTableViewController: XJBaseTableViewController {
-
+    let XJHomeReuseIdentifier = "XJHomeReuseIdentifier"
+    
+    //保存微博数组
+    var statuses = [XJStatus](){
+        //当别人设置完毕数据，就刷新表格
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //1.如果没有登录，就设置未登录界面的信息
@@ -22,7 +31,22 @@ class XJHomeTableViewController: XJBaseTableViewController {
         //3.注册通知，监听菜单
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.change), name: XJPopoverAnimatorWillShow, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.change), name: XJPopoverAnimatorWillDismiss, object: nil)
+        //注册一个cell
+        tableView.registerClass(XJStatusTableViewCell.classForCoder(), forCellReuseIdentifier: XJHomeReuseIdentifier)
+//        tableView.estimatedRowHeight = 200
+
         
+        tableView.separatorStyle = .None
+        //4.加载微博数据
+        loadData()
+    }
+    private func loadData() -> () {
+        XJStatus.loadStatuses { (models, error) in
+            if error != nil{
+                return
+            }
+            self.statuses = models!
+        }
     }
     deinit{
     //移除通知
@@ -77,8 +101,45 @@ class XJHomeTableViewController: XJBaseTableViewController {
         return pa
     
     }()
+    //微博行高德缓存，利用字典作为容器，key就是微博的id,值就是对应微博的行高
+    var rowCache = [Int:CGFloat]()
+    override func didReceiveMemoryWarning() {
+        //清空缓存
+        rowCache.removeAll()
+    }
 }
-
+extension XJHomeTableViewController{
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses.count
+        
+    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(XJHomeReuseIdentifier, forIndexPath: indexPath) as! XJStatusTableViewCell
+        cell.status = statuses[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    //返回行高
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        //1.取出对应行的模型
+        let status = statuses[indexPath.row]
+        //2.判断缓存中有没有
+        if let height = rowCache[status.id] {
+            return height
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(XJHomeReuseIdentifier) as! XJStatusTableViewCell
+        
+        //2.拿到对应行的行高
+        
+        let rowHeight =  cell.rowHeight(status)
+        rowCache.updateValue(rowHeight, forKey: status.id)
+        return rowHeight
+        
+    }
+}
 
 
 
