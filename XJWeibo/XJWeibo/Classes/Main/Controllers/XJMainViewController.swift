@@ -28,7 +28,11 @@ class XJMainViewController: UITabBarController {
     }
     
     func composeBtnClick(btn:UIButton) -> Void {
-        print(#function)
+        let composeVc = XJComposeViewController()
+        let nav = UINavigationController(rootViewController: composeVc)
+        presentViewController(nav, animated: true, completion: nil)
+        
+        
     }
     
     //MARK -添加加号按钮
