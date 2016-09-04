@@ -10,12 +10,16 @@ import UIKit
 import SnapKit
 import SVProgressHUD
 class XJComposeViewController: UIViewController {
+    //表情键盘
     private lazy var emoticonVc:XJEmoticonViewController = {
         return XJEmoticonViewController {[weak self](emoticon) in
             self!.textView.insertEmoticon(emoticon)
         }
     }()
+    //图片选择器
+    private lazy var photoSelectorVc:XJPhotoSelectorViewController = XJPhotoSelectorViewController()
     var toolbarBottomCons:Constraint?
+    var photoViewHeightCons:Constraint?
     override func viewDidLoad() {
         super.viewDidLoad()
         //0.注册通知监听键盘弹出和消失
@@ -24,19 +28,26 @@ class XJComposeViewController: UIViewController {
         
         
         addChildViewController(emoticonVc)
-        
+        addChildViewController(photoSelectorVc)
         //1.初始化导航条
         setupNav()
         //2.初始化输入框
         setupInputView()
+        //初始化图片选择器
+        setupPhotoView()
         //3.初始化工具条
         setupToolbar()
         
     }
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        //3主动召唤神龙
-        textView.becomeFirstResponder()
+//        if (photoViewHeightCons as! NSLayoutConstraint).constant == 0 {
+            //3主动召唤神龙
+        if photoSelectorVc.view.frame.height == 0 {
+            textView.becomeFirstResponder()
+        }
+        
+//        }
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -50,7 +61,11 @@ class XJComposeViewController: UIViewController {
         //1.取出键盘最终的frame
         let value = notify.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         let rect = value.CGRectValue()
+        //取出键盘的动画节奏
+        let curve = notify.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        
         UIView.animateWithDuration(0.25) { [weak self] in
+            UIView.setAnimationCurve(UIViewAnimationCurve(rawValue: curve.integerValue)!)
             self!.toolbarBottomCons?.updateOffset(-(UIScreen.mainScreen().bounds.height - rect.origin.y))
         }
         
@@ -101,22 +116,22 @@ class XJComposeViewController: UIViewController {
      1.2发送文本微博
      */
     func sendStatus() -> () {
-        let path = "2/statuses/update.json"
-        let params = ["access_token":XJUserAccount.loadAccount()!.access_token,"status":textView.text!]
+        let text = textView.emoticonAttributedText()
+        let image = photoSelectorVc.pictureImages.first
         
-        XJNetworkTools.shareNetworkTools().POST(path, parameters: params, progress: nil, success: { (_, json) in
-                //1.2.1提示用户发送成功
-                SVProgressHUD.showSuccessWithStatus("发送成功")
-                SVProgressHUD.setDefaultMaskType(.Black)
-                //1.2.2关闭发送界面
-                self.close()
-            }) { (_, error) in
+        
+        XJNetworkTools.shareNetworkTools().sendStatus(text, image: image, successCallback: { (status) in
+            //1.2.1提示用户发送成功
+            SVProgressHUD.showSuccessWithStatus("发送成功")
+            SVProgressHUD.setDefaultMaskType(.Black)
+            //1.2.2关闭发送界面
+            self.close()
+            }) { (error) in
                 print(error)
                 //1.2.3提示用户发送失败
                 SVProgressHUD.showSuccessWithStatus("发送失败")
                 SVProgressHUD.setDefaultMaskType(.Black)
         }
-        
     }
     //MARK: - 2.初始化输入框
     /**
@@ -143,6 +158,7 @@ class XJComposeViewController: UIViewController {
         
         
         view.addSubview(toolbar)
+        view.addSubview(tipLabel)
         var items = [UIBarButtonItem]()
         items.append(UIBarButtonItem.creatBarButtonItem("compose_toolbar_picture", target: self, action: #selector(self.selectPicture)))
         items.append(UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil))
@@ -161,10 +177,34 @@ class XJComposeViewController: UIViewController {
             make.left.equalToSuperview()
             make.size.equalTo(CGSizeMake(width, 44))
         }
+            tipLabel.snp_makeConstraints { (make) in
+            make.right.equalTo(toolbar.snp_right)
+            make.bottom.equalTo(toolbar.snp_top)
+        }
+        
         
     }
     func selectPicture() -> Void {
-        print(#function)
+        //1.关闭键盘
+        textView.resignFirstResponder()
+        //2.调整图片选择器的高度
+        photoViewHeightCons?.updateOffset(UIScreen.mainScreen().bounds.height*0.6)
+    }
+    func setupPhotoView() -> Void {
+        //1.添加图片选择器
+        view.insertSubview(photoSelectorVc.view, belowSubview: toolbar)
+        //2.布局图片选择器
+        let size = UIScreen.mainScreen().bounds.size
+        let width = size.width
+        let height:CGFloat = 0
+        photoSelectorVc.view.snp_makeConstraints { (make) in
+            photoViewHeightCons = make.height.equalTo(height).constraint
+            make.width.equalTo(width)
+            make.bottom.equalTo(view.snp_bottom)
+            make.left.equalTo(view.snp_left)
+        }
+        
+        
     }
     func inputEmoticon() -> Void {
         //1.关闭键盘
@@ -177,18 +217,23 @@ class XJComposeViewController: UIViewController {
     //MARK: - 懒加载
     private lazy var textView:UITextView = {
         let tv = UITextView()
-        tv.font = UIFont.systemFontOfSize(13)
+        tv.font = UIFont.systemFontOfSize(20)
         tv.delegate = self
         return tv
     }()
     private lazy var placeholderLabel:UILabel = {
         let label = UILabel()
         label.text = "分享新鲜事..."
-        label.font = UIFont.systemFontOfSize(13)
+        label.font = UIFont.systemFontOfSize(20)
         label.textColor = UIColor.darkGrayColor()
         return label
     }()
     private lazy var toolbar = UIToolbar()
+    private lazy var tipLabel:UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
     //MARK: - 接收到内存警告
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -197,10 +242,17 @@ class XJComposeViewController: UIViewController {
 }
 
     //MARK: - TextView代理
+private let maxTipTextLength = 10
 extension XJComposeViewController:UITextViewDelegate{
     func textViewDidChange(textView: UITextView) {
         placeholderLabel.hidden = textView.hasText()
         navigationItem.rightBarButtonItem?.enabled = textView.hasText()
+        //当前已经输入的内容长度
+        let count = textView.emoticonAttributedText().characters.count
+        let result = maxTipTextLength - count
+        
+        tipLabel.textColor = result > 0 ?UIColor.darkGrayColor():UIColor.redColor()
+        tipLabel.text = count == 0 ? "": "\(result)"
     }
 }
 

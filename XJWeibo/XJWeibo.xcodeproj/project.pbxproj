@@ -31,6 +31,8 @@
 		36A73E9E1D6FF0B600D2DC85 /* XJProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */; };
 		36A73EAC1D70376400D2DC85 /* XJNullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */; };
 		36A73EAE1D7037A400D2DC85 /* XJMainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */; };
+		36B5B6C21D7B13CB00EE0CE3 /* UIImage+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5B6C01D7B13CB00EE0CE3 /* UIImage+Category.swift */; };
+		36B5B6C31D7B13CB00EE0CE3 /* XJPhotoSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B5B6C11D7B13CB00EE0CE3 /* XJPhotoSelectorViewController.swift */; };
 		36D9C95E1D77FB29007665EC /* XJStatusTableViewBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9C95D1D77FB29007665EC /* XJStatusTableViewBottomView.swift */; };
 		36D9C9601D77FC4E007665EC /* XJStatusTableViewTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9C95F1D77FC4E007665EC /* XJStatusTableViewTopView.swift */; };
 		36D9C9621D78076B007665EC /* XJStatusForwardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9C9611D78076B007665EC /* XJStatusForwardTableViewCell.swift */; };
@@ -103,6 +105,8 @@
 		36A73E9D1D6FF0B600D2DC85 /* XJProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJProfileTableViewController.swift; sourceTree = "<group>"; };
 		36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJNullViewController.swift; sourceTree = "<group>"; };
 		36A73EAD1D7037A400D2DC85 /* XJMainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = XJMainVCSettings.json; sourceTree = "<group>"; };
+		36B5B6C01D7B13CB00EE0CE3 /* UIImage+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Category.swift"; sourceTree = "<group>"; };
+		36B5B6C11D7B13CB00EE0CE3 /* XJPhotoSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJPhotoSelectorViewController.swift; sourceTree = "<group>"; };
 		36D9C95D1D77FB29007665EC /* XJStatusTableViewBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusTableViewBottomView.swift; sourceTree = "<group>"; };
 		36D9C95F1D77FC4E007665EC /* XJStatusTableViewTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusTableViewTopView.swift; sourceTree = "<group>"; };
 		36D9C9611D78076B007665EC /* XJStatusForwardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XJStatusForwardTableViewCell.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 		364E3E3E1D7941FE001E98BC /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				36B5B6BF1D7B13CB00EE0CE3 /* PhotoSelector */,
 				3689D9701D7AC8E7002F8147 /* EmoticonView */,
 				364E3E3F1D794236001E98BC /* XJComposeViewController.swift */,
 			);
@@ -482,6 +487,15 @@
 				36A73EAB1D70376400D2DC85 /* XJNullViewController.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		36B5B6BF1D7B13CB00EE0CE3 /* PhotoSelector */ = {
+			isa = PBXGroup;
+			children = (
+				36B5B6C01D7B13CB00EE0CE3 /* UIImage+Category.swift */,
+				36B5B6C11D7B13CB00EE0CE3 /* XJPhotoSelectorViewController.swift */,
+			);
+			path = PhotoSelector;
 			sourceTree = "<group>";
 		};
 		36EFDC1F1D753FC4008E4FEF /* OAuth */ = {
@@ -813,6 +827,7 @@
 				36DF15B91D714666004F009D /* XJVisitorView.swift in Sources */,
 				36A73E9A1D6FF06600D2DC85 /* XJDiscoverTableViewController.swift in Sources */,
 				36D9C9601D77FC4E007665EC /* XJStatusTableViewTopView.swift in Sources */,
+				36B5B6C31D7B13CB00EE0CE3 /* XJPhotoSelectorViewController.swift in Sources */,
 				364E3E401D794236001E98BC /* XJComposeViewController.swift in Sources */,
 				3689D9771D7AC8E7002F8147 /* UITextView+Category.swift in Sources */,
 				36A73E961D6FEFA400D2DC85 /* XJMainViewController.swift in Sources */,
@@ -834,6 +849,7 @@
 				36A73E9C1D6FF09500D2DC85 /* XJMessageTableViewController.swift in Sources */,
 				36D9C95E1D77FB29007665EC /* XJStatusTableViewBottomView.swift in Sources */,
 				36D9C9621D78076B007665EC /* XJStatusForwardTableViewCell.swift in Sources */,
+				36B5B6C21D7B13CB00EE0CE3 /* UIImage+Category.swift in Sources */,
 				36EFDC2A1D75BB9D008E4FEF /* XJNewfeatureCollectionViewController.swift in Sources */,
 				3689D9781D7AC8E7002F8147 /* XJEmoticonPackage.swift in Sources */,
 				368CCE591D76E352000AB800 /* XJUIButton+XJExtension.swift in Sources */,
